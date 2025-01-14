@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Slider & Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://blog.webico.vn/wp-content/uploads/2016/02/Depositphotos_65204039_original.jpg" alt="user" width="100">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Me</a></li>
+        </ul>
+    </nav>
+    <header>
+        <button id="toggle" class="toggle">
+            <div class="fa fa-bars fa-2x"></div>
+        </button>
+        <h1>My Landing Page</h1>
+        <p>Trang này cung cấp thông tin và tài nguyên dành cho người dùng, giúp họ khám phá nhiều tiện ích và dịch vụ thú vị</p>
+        <button id="open" class="cta-btn">Sign Up</button>
+    </header>
+
+    <div class="container">
+        <h2>Trang này nói về điều gì?</h2>
+        <p>Chúng tôi cam kết mang đến cho bạn những trải nghiệm tốt nhất với các dịch vụ tối ưu và chất lượng hỗ trợ khách hàng vượt trội.</p>
+        <p>Chúng tôi tập trung vào việc phát triển các giải pháp sáng tạo giúp bạn tối ưu hóa công việc và cải thiện cuộc sống. Hãy tham gia cùng chúng tôi để trải nghiệm những điều tuyệt vời.</p>
+        <h2>Hãy nói thêm cho tôi</h2>
+        <p>Chúng tôi luôn lắng nghe và nỗ lực không ngừng để cải thiện các dịch vụ. Dù bạn đang tìm kiếm giải pháp cho công việc hay cuộc sống, chúng tôi có thể giúp bạn đưa ra quyết định đúng đắn.</p>
+        <h2>Lợi ích</h2>
+        <ul>
+        <li>Truy Cập Trọn Đời</li>
+        <li>Hoàn Tiền Trong 30 Ngày</li>
+        <li>Hỗ Trợ Khách Hàng Theo Yêu Cầu</li>
+        </ul>
+        <p>Với chúng tôi, bạn sẽ nhận được sự bảo vệ tối đa về quyền lợi. Những dịch vụ mà chúng tôi cung cấp luôn đi kèm với cam kết bảo đảm chất lượng. Bạn có thể yên tâm rằng mình sẽ luôn được hỗ trợ khi cần thiết, và chúng tôi sẽ luôn đồng hành cùng bạn trong mọi bước đi.</p>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button id="close" class="close-btn">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>Sign Up</h3>
+            </div>
+            <div class="modal-content">
+                <p>Đăng ký với chúng tôi để nhận ưu đãi, hỗ trợ và nhiều hơn nữa</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter Name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Email" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" placeholder="Confirm Password" class="form-input">
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
