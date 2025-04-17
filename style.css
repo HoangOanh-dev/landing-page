@@ -70,68 +70,116 @@ header .cta-btn:hover {
     background-color: #555;
 }
 
-/* Modal */
+:root {
+  --modal-bg: rgba(0, 0, 0, 0.5);
+  --modal-color: #333;
+  --modal-text: #666;
+  --modal-btn-bg: #333;
+  --modal-btn-hover: #555;
+  --modal-radius: 10px;
+}
+
+/* ===== Modal Container ===== */
 .modal-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--modal-bg);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
 }
 
+/* ===== Modal Box ===== */
 .modal {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    position: relative;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: var(--modal-radius);
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.4s ease;
 }
 
+/* ===== Close Button ===== */
 .modal .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s ease;
 }
 
+.modal .close-btn:hover {
+  color: var(--modal-color);
+}
+
+/* ===== Modal Header ===== */
 .modal .modal-header h3 {
-    margin: 0 0 20px;
-    color: #333;
+  margin-bottom: 15px;
+  color: var(--modal-color);
+  font-size: 22px;
 }
 
+/* ===== Modal Content ===== */
 .modal .modal-content p {
-    margin-bottom: 20px;
-    color: #666;
+  margin-bottom: 20px;
+  color: var(--modal-text);
+  font-size: 15px;
+  line-height: 1.6;
 }
 
+/* ===== Input ===== */
 .modal .form-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.3s ease;
 }
 
+.modal .form-input:focus {
+  outline: none;
+  border-color: var(--modal-color);
+}
+
+/* ===== Submit Button ===== */
 .modal .submit-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--modal-btn-bg);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
 
 .modal .submit-btn:hover {
-    background-color: #555;
+  background-color: var(--modal-btn-hover);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
 }
